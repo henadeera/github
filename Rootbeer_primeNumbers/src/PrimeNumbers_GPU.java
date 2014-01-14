@@ -44,32 +44,5 @@ public class PrimeNumbers_GPU extends Application implements Kernel {
 	   // }
 	    ret =r;
   }
-  public void calculate(){
-
-	  int[] s= source;
-	  int l= s.length;
-	  int[][] r = ret;
-	  int ind = index; 
-	  int count=0;
-	  
-	 /* int a =  RootbeerGpu.getThreadIdxx();
-	  int b = RootbeerGpu.getBlockDimx();
-      int c = RootbeerGpu.getBlockIdxx();*/
-	    
-	   for(int k = 0; k<l ;k++){ 
-	    	int num = s[k];   	
-	    	if(num% 2!= 0 ) {  		
-	    		for(int j = 3; j < num; j = j + 2) {
-	    	        if(num % j == 0) {
-	    	          break ;
-	    	        }
-	    	        if(num == j + 2){ 	        	
-	    	        	r[ind][count]= num;   	        	
-	    	        	count++;    	        	
-	    	        }		    		
-	    		}
-	    	}   
-	    }
-	    ret =r;
-  }
+ 
 }

@@ -29,7 +29,7 @@ public class Main {
 		 Date date1= new Date();
 		 long d2 = date1.getTime();
 		 
-		 System.out.println(d2-d);
+		 System.out.println("Time taken to gpu execution: " + Long.toString((d2-d))+" ms");
 		 
 		 //printing
 		for (int  i = 0 ; i<c.length ;i++ ){

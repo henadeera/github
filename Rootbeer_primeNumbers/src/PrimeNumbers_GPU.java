@@ -18,18 +18,20 @@ public class PrimeNumbers_GPU extends Application implements Kernel {
  
   public void gpuMethod() {
 	  int[] s = source;
-	  //int l= s.length;
+	  int l= s.length;
 	  int[][] r = ret;
 	  int i= index; 
 	  int count=0;
 	  
-	  int a =  RootbeerGpu.getThreadIdxx();
+	  int a = RootbeerGpu.getThreadIdxx();
 	  int b = RootbeerGpu.getBlockDimx();
       int c = RootbeerGpu.getBlockIdxx();
 	    
 	   //for(int k = 0; k<l ;k++){ 
-	    	//int num = s[k];  
-      		  int num = s[b*c+a];	
+	    	//int num = s[k];
+      
+      		int num = s[(b*c)+a];	
+      		if (num< l) {
 	    	if(num% 2!= 0 ) {  		
 	    		for(int j = 3; j < num; j = j + 2) {
 	    	        if(num % j == 0) {
@@ -41,7 +43,7 @@ public class PrimeNumbers_GPU extends Application implements Kernel {
 	    	        }		    		
 	    		}
 	    	}   
-	   // }
+	    }
 	    ret =r;
   }
  

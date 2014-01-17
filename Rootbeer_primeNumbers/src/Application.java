@@ -6,5 +6,4 @@ abstract class Application {
  int [][] ret;
  int index;
  
-abstract void calculate();
 }

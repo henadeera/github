@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ant jar
+java -jar lib/Rootbeer-1.0.51.jar App.jar App-GPU.jar -64bit

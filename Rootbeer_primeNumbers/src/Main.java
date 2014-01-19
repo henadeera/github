@@ -9,7 +9,8 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 					
-		int [] intArray = new int [2048] ;
+    int size = 32;
+		int [] intArray = new int [size] ;
 		List <int[]> l = new ArrayList<int[]>();
 		
 		for (int i = 0; i<intArray.length;i++){
@@ -24,7 +25,7 @@ public class Main {
 		
 		//computation
 		GpuJobsExecuter gpuJobsExecuter = new GpuJobsExecuter();
-		int [][] c = gpuJobsExecuter.compute(l,1024,2,2048);
+		int [][] c = gpuJobsExecuter.compute(l,size,2,2*size);
 		
 		 Date date1= new Date();
 		 long d2 = date1.getTime();

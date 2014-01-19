@@ -25,7 +25,7 @@ public class PrimeNumbers_GPU extends Application implements Kernel {
 	  
 	  int a = RootbeerGpu.getThreadIdxx();
 	  int b = RootbeerGpu.getBlockDimx();
-      int c = RootbeerGpu.getBlockIdxx();
+    int c = RootbeerGpu.getBlockIdxx();
 	    
 	   //for(int k = 0; k<l ;k++){ 
 	    	//int num = s[k];
